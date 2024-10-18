@@ -1,0 +1,21 @@
+.card{
+    background-color: aqua;
+    padding: 1.4rem 1rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 300px;
+}
+.card-content{
+    background-color: azure;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.btn{
+    background-color: bisque;
+    padding:0.6rem 1.2rem;
+    border-radius: 12px;
+    color: black;
+    font-size: 1.2rem;
+}

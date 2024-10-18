@@ -1,0 +1,116 @@
+/* base rule */
+@tailwind components;
+@tailwind utilities;
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  font-family: poppins;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+.container{
+  width: 90%;
+  margin: 0px auto;
+}
+.active{
+  color: rgb(9, 231, 9);
+  transition: all 0.3s;
+}
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin: 50px auto;
+  animation: spin 2s linear infinite;
+}
+
+/* nav css  */
+.bar{
+  display: none;
+}
+header{
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+
+/* end  */
+.home{
+  display: flex;
+  align-items: center;
+  padding: 50px 0;
+}
+.success-card{
+  max-width: 500px;
+  margin: 50px auto;
+  width: 100%;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@media  screen and (max-width:576px) {
+  .container{
+    width: 100%;
+    padding: 0px 1.2rem;
+    margin: 0px auto;
+  }
+  .nav-links{
+    height: 0px;
+    transition: all 0.3s;
+  }
+  .bar{
+    display: block;
+  }
+  .close-menu{
+    display: none;
+  }
+  .nav-links{
+    background-color: rgb(194, 223, 248,0.9);
+    height:100vh;
+    justify-content: center;
+    transition: all 0.3s;
+    flex-direction: column;
+    position: absolute;
+    top: 75px;
+    z-index: -1;
+    width: 0;
+    overflow: hidden;
+    
+    left: 0;
+ 
+
+
+
+  }
+  header.active-links .nav-links{
+    overflow: visible;
+    width: 100%;
+    z-index: -3;
+
+  }
+
+ 
+header.active-links .close-menu{
+  display: block;
+}
+header.active-links .open-menu{
+  display: none;
+}
+.home{
+  align-items: flex-start;
+}
+.hero-img{
+  order: 1;
+}
+.text{order: 2;}
+
+}
+/* end  */
